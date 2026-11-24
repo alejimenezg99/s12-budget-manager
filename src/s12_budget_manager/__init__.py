@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from s12-budget-manager!")
+from s12_budget_manager.cli import main
