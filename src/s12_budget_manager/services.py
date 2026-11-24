@@ -1,4 +1,4 @@
-# budget logic: add, filter, summarize
+"""Business logic: add, filter, summarize"""
 
 # Imports
 
