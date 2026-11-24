@@ -1,4 +1,4 @@
-"""Input validation, boundary checks and error messages"""
+"""Input validation and error messages"""
 
 # Imports
 
@@ -13,7 +13,7 @@ def validate_date(raw) -> date:
     try:
         parsed_date = date.fromisoformat(raw.strip())
     except ValueError:
-        raise ValueError(f"date '{raw}' must be in YYYY-MM-DD format")
+        raise ValueError(f"date '{raw}' is not valid in YYYY-MM-DD format")
     return parsed_date
 
 def validate_kind(raw) -> str:

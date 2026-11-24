@@ -1,0 +1,16 @@
+id,date,kind,category,amount,currency
+T001,2026-01-29,income,gifts,500,EUR
+T002,2026-03-31,expense,rent,200,eur
+T003,2026-02-30,expense,cinema,20,EUR
+T004,2026-06-01,expense,other,,EUR
+T005,2026-08-09,expense,other,-20,EUR
+T006,2026-08-09,expense,other,20,COP
+T007,2026-09-05,income,rent,600,EUR
+T010,2026-10-02,expense,groceries,"20,15",EUR
+T011,2026-11-04,income,salary,5000,EUR
+T012,2025-12-25,income,gifts,50,EUR
+T013,2026-03-31,expense,restaurants,90,EUR
+T014,2026-04-01,expense,other,10,EUR
+T015,2026-08-20,Expense,groceries,45.30,EUR
+T016,2026-12-12,expense,TRANSPORT,10.99,EUR
+T017,2026-12-12,expense,Groceries,100,eur
