@@ -3,7 +3,7 @@
 # Imports
 
 from s12_budget_manager.storage import load_transactions, save_transactions
-from s12_budget_manager.services import add_transaction
+from s12_budget_manager.services import add_transaction, summarize, totals_by_category, filter_by_kind
 
 # Constant
 
@@ -32,6 +32,25 @@ def add_flow(transactions):
     except ValueError as e:
         print(f"Error: {e}")
 
+# Listing all transactions
+
+def list_flow(transactions):
+    if len(transactions) == 0:
+        print("No transactions yet.")
+    else:
+        for transaction in transactions:
+            print(f"{transaction.id} {transaction.date} {transaction.kind} {transaction.category} {transaction.amount} {transaction.currency}")
+
+# Create a report
+
+def summary_flow(transactions):
+    summary = summarize(transactions)
+    print(f"Income: {summary["Income"]}, Expenses: {summary["Expenses"]}, Balance: {summary["Balance"]}")
+    total_by_cat = totals_by_category(filter_by_kind(transactions, "expense"))
+    print("Expenses by category:")
+    for category, amount in total_by_cat.items():
+        print(f"{category.capitalize()}, {amount}")
+
 # Main function
 
 def main():
@@ -46,9 +65,9 @@ def main():
         if selection == "1":
             add_flow(transactions)
         elif selection == "2":
-            print("Not implemented yet!")
+            list_flow(transactions)
         elif selection == "3":
-            print("Not implemented yet!")
+            summary_flow(transactions)
         elif selection == "4":
             print("Goodbye!")
             break
