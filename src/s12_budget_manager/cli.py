@@ -1,4 +1,4 @@
-# command-line interaction
+"""Command line interaction with users"""
 
 # Imports
 
